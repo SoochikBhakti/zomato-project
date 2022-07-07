@@ -1,0 +1,145 @@
+﻿Dim searchString1,resstring1,searchString2,resstring2,searchString3,resstring3,searchString4,resstring4,resString5,searchString5,resString6,searchString6,resString7,searchString7,resString8,searchString8,resString9,acual9,resString10,acual10
+
+Dim res1,acual1,res2,acual2,res3,acual3,res4,acual4,res5,acual5,res6,acual6,res7,acual7,res8,acual8,res9,acuall9,res10,acuall10
+ 'searchString1 = "Bikanervala | Order Online from Bikanervala in Delhi NCR"
+ 'searchString2 = "Inspiration for your first order"
+ 'searchString3 =  "Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends_2"
+ 'searchString4 = "Top brands for you"
+ 'searchString5 = "Dominos Outlets: Check Dominos locations online in Delhi NCR"
+ 'searchString6 =  "Haldiram's Outlets: Check Haldiram's locations online in Delhi NCR"
+ 'searchString7 = "KFC, Paharganj, New Delhi"
+'searchString8 = "Om Sweets & Snacks Menu, Menu for Om Sweets & Snacks, Jail Road, New Delhi"
+ 'acual10= "Please enter your phone number"
+ 'acual9= "Please enter your email id"
+ 
+'Bikanervala
+Set browserObject = Description.Create
+browserObject("creationtime").value ="0"
+
+Set pageObject = Description.Create
+pageObject("micclass").value ="Page"
+
+Set TopBtn = Description.Create
+TopBtn("xpath").value ="//DIV[3]/SECTION[1]/DIV[1]/DIV[@role='button'][1]"
+
+Set BikaLink = Description.Create
+BikaLink("xpath").value ="//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='Bikanervala']"
+
+Set Bikapage = Description.Create
+Bikapage("url").value ="https://www.zomato.com/ncr/restaurants/bikanervala"
+
+'Biryani Blues
+
+Set BiryLink = Description.Create
+BiryLink("xpath").value ="//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='Biryani Blues']"
+
+Set DelLink = Description.Create
+DelLink("xpath").value ="//A[@role='link']/SPAN[@role='link' and normalize-space()='Delhi NCR/']"
+
+Set Inspi = Description.Create
+Inspi("xpath").value ="//DIV[7]/DIV[1]/H3[1]"
+
+'BTW       
+
+Set BTWLink = Description.Create
+BTWLink("xpath").value ="//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='BTW']"
+
+Set BTW1Link = Description.Create
+BTW1Link("xpath").value ="//A[@role='link']/SPAN[@role='link' and normalize-space()='Delhi NCR/']"
+
+Set BTWwebS = Description.Create
+BTWwebS("xpath").value ="//DIV[4]/DIV[1]/DIV[1]/SECTION[1]/SECTION[@role='tablist'][1]"
+
+Set BTWwebSS = Description.Create
+BTWwebSS("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[1]/H6[1]"
+
+
+'Burger King
+
+Set BkLink = Description.Create
+BkLink("xpath").value ="//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='Burger King']"
+
+Set NCRLink = Description.Create
+NCRLink("xpath").value ="//A[@role='link']/SPAN[@role='link' and normalize-space()='Delhi NCR/']"
+
+Set BKweb = Description.Create
+BKweb("xpath").value ="//DIV[@id='root']/DIV[1]/DIV[8]/H3[1]"
+
+'Domino's
+
+Set DomiLink = Description.Create
+DomiLink ("url").value ="https://www.zomato.com/ncr/restaurants/dominos"
+
+Set Rating = Description.Create
+Rating("xpath").value ="//DIV[@id='root']/DIV[1]/DIV[5]/DIV[1]/DIV[1]/DIV[8]/DIV[1]"
+
+Set RatingNum = Description.Create
+RatingNum("xpath").value ="//DIV[8]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/SPAN[7]"
+
+Set Applybtu = Description.Create
+Applybtu("xpath").value ="//DIV/DIV/DIV/SECTION[normalize-space()='Clear allApply']/BUTTON[@role='button'][2]"
+
+'HaldiRam
+
+Set HalLink = Description.Create
+HalLink ("url").value ="https://www.zomato.com/ncr/restaurants/haldirams"
+
+Set FinDin = Description.Create
+FinDin("xpath").value ="//DIV[normalize-space()='Fine Dining']/DIV[1]"
+
+Set Backbtu = Description.Create
+Backbtu("xpath").value ="//DIV[@id='root']/DIV[1]/DIV[8]/DIV[1]/BUTTON[@role='button'][1]"
+
+'KFC
+
+Set KFCLink = Description.Create
+KFCLink ("url").value ="https://www.zomato.com/ncr/restaurants/kfc"
+
+Set RestcardKFC = Description.Create
+RestcardKFC("url").value ="https://www.zomato.com/ncr/kfc-1-connaught-place-new-delhi/info"
+
+Set KFCcard = Description.Create
+KFCcard("url").value ="https://www.zomato.com/ncr/kfc-3-paharganj-new-delhi/info"
+
+Set share = Description.Create
+share("xpath").value ="//DIV[@id='root']/DIV[1]/MAIN[1]/DIV[1]/SECTION[3]/DIV[1]/SECTION[1]/DIV[2]"
+
+'OMSWEET
+
+'Set ToppBtn = Description.Create
+'ToppBtn ("url").value ="https://www.zomato.com/ncr/restaurants/om-sweets-snacks]"
+
+Set OMLink = Description.Create
+OMLink ("xpath").value ="//DIV/SECTION/DIV/SECTION/DIV/A[normalize-space()='Om Sweets & Snacks']"
+
+Set RestcardOM = Description.Create
+RestcardOM("url").value ="https://www.zomato.com/ncr/om-sweets-snacks-jail-road-new-delhi/info"
+
+Set OMSLink = Description.Create
+OMSLink ("xpath").value ="//DIV[@role='tab']/H2/A[normalize-space()='Menu']"
+
+'Applink
+
+Set webeditL = Description.Create
+webeditL ("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SECTION[1]/SECTION[1]/INPUT[1]"
+
+Set EnterVal = Description.Create
+EnterVal ("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]"
+
+Set PlsEnter = Description.Create
+PlsEnter ("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SECTION[1]/DIV[1]"
+
+'ApplinkCONT
+
+Set RadioL = Description.Create
+RadioL ("xpath").value ="//SECTION/LABEL/SPAN[normalize-space()='Phone']"
+
+Set TypeH = Description.Create
+TypeH ("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/INPUT[1]"
+
+Set Entermnp = Description.Create
+Entermnp("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]"      
+
+Set Plsent = Description.Create
+Plsent("xpath").value ="//DIV[5]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/P[1]"
+

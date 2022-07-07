@@ -1,0 +1,265 @@
+﻿Function test11()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Bikanervala").Click
+wait(2)
+res1=Browser("Zomato").Page("Bikanervala | Order Online").GetROProperty("text")
+acual1=DataTable.Value("Expected_Value","Test Data")
+If Instr(res1,acual1)=0 Then
+Reporter.ReportEvent micPass,"test11()" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test11()" , "Fail"
+End if	
+If Instr(res1,acual1)=0 Then
+test11= "Pass"
+Else
+test11= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function test12()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Biryani Blues").Click
+wait(2)
+Browser("Zomato").Page("Biryani Blues | Order").Link("Delhi NCR/").Click
+wait(2)
+res2= Browser("Zomato").Page("Restaurants in Central").WebElement("Inspiration for your first").GetROProperty("test")
+acual2=DataTable.Value("Expected_Value","Test Data")
+If Instr(res2,acual2)=0 Then
+Reporter.ReportEvent micPass,"test12 " , "Pass"
+Else
+Reporter.ReportEvent micFail,"test12" , "Fail"
+End if	
+If Instr(res2,acual2)=0 Then
+test12= "Pass"
+Else
+test12= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+
+End Function
+
+Function test13()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("BTW").Click
+wait(2)
+Browser("Zomato").Page("BTW | Order Online from").Link("Delhi NCR/").Click
+wait(2)
+Browser("Zomato").Page("Restaurants in Central").WebTabStrip("DeliveryDining OutNightlife").Select "Dining Out"
+wait(2)
+res3=Browser("Zomato").Page("Best Dining Restaurants").WebElement("Explore curated lists").GetROProperty("text")
+acual3=DataTable.Value("Expected_Value","Test Data")
+If Instr(res3,acual3)=0 Then
+Reporter.ReportEvent micPass,"test13 " , "Pass"
+Else
+Reporter.ReportEvent micFail,"test13" , "Fail"
+End if	
+If Instr(res3,acual3)=0 Then
+test13= "Pass"
+Else
+test13= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+
+Function test14()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Burger King").Click
+wait(2)
+Browser("Zomato").Page("Burger King | Order Online").Link("Delhi NCR/").Click
+wait(2)
+res4= Browser("Zomato").Page("Restaurants in Central").WebElement("Top brands for you").GetROProperty("text")
+acual4=DataTable.Value("Expected_Value","Test Data")
+If Instr(res4,acual4)=0 Then
+Reporter.ReportEvent micPass,"test14" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test14" , "Fail"
+End if	
+If Instr(res4,acual4)=0 Then
+test14= "Pass"
+Else
+test14= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+
+End Function
+
+
+Function test15()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Domino's").Click
+wait(2)
+Browser("Zomato").Page("Dominos | Order Online").Link("Delhi NCR/").Click
+wait(2)
+Browser("Zomato").Page("Restaurants in Central").WebTabStrip("DeliveryDining OutNightlife").Select "Nightlife"
+wait(2)
+res5= Browser("Zomato").Page("Nightlife Restaurants_2").WebElement("Nightlife Restaurants").GetROProperty("text")
+acual5=DataTable.Value("Expected_Value","Test Data")
+If Instr(res5,acual5)=0 Then
+Reporter.ReportEvent micPass,"test15" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test15" , "Fail"
+End if	
+If Instr(res5,acual5)=0 Then
+test15= "Pass"
+Else
+test15= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+
+End Function
+
+Function test16()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Haldiram's").Click
+wait(2)
+Browser("Zomato").Page("Haldiram's Outlets: Check").WebElement("Haldiram's, Delhi, India,").GetROProperty("text")
+acual6=DataTable.Value("Expected_Value","Test Data")
+If Instr(res6,acual6)=0 Then
+Reporter.ReportEvent micPass,"test16" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test16" , "Fail"
+End if	
+If Instr(res6,acual6)=0 Then
+test16= "Pass"
+Else
+test16= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function test17()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("KFC").Click
+wait(2)
+Browser("Zomato").Page("KFC | Order Online from").WebElement("KFC, North Delhi").GetROProperty("text")
+acual5=DataTable.Value("Expected_Value","Test Data")
+If Instr(res7,acual7)=0 Then
+Reporter.ReportEvent micPass,"test17" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test17" , "Fail"
+End if	
+If Instr(res7,acual7)=0 Then
+test17= "Pass"
+Else
+test17= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function test18()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebButton("Top Restaurant Chains").Click
+wait(2)
+Browser("Zomato").Page("Zomato").Link("Om Sweets & Snacks").Click
+wait(2)
+Browser("Zomato").Page("KFC Outlets: Check KFC").Image("Restaurant Card_2").Click
+wait(2)
+Browser("Zomato").Page("Om Sweets & Snacks, Jail").Link("Menu").Click
+wait(2)
+Browser("Zomato").Page("Om Sweets & Snacks Menu,").WebElement("Om Sweets & Snacks Menu").GetROProperty("text")
+acual8=DataTable.Value("Expected_Value","Test Data")
+If Instr(res8,acual8)=0 Then
+Reporter.ReportEvent micPass,"test18" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test18" , "Fail"
+End if	
+If Instr(res8,acual8)=0 Then
+test18= "Pass"
+Else
+test18= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function test19()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebEdit("WebEdit").Set "bhaktisoochik"
+Browser("Zomato").Page("Zomato").WebElement("Please enter your email").Check CheckPoint("Please enter your email id_2")
+wait(2) 
+Browser("Zomato").Page("Zomato").WebElement("EmailPlease enter your").Click
+wait(2)
+Browser("Zomato").Page("Zomato").WebElement("Please enter your email").GetROProperty("text")
+acuall9=DataTable.Value("Expected_Value","Test Data")
+If Instr(res9,acuall9)=0 Then
+Reporter.ReportEvent micPass,"test19" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test19" , "Fail"
+End if	
+If Instr(res9,acuall9)=0 Then
+test19= "Pass"
+Else
+test19= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function test20()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser("Zomato").Page("Zomato").WebRadioGroup("radio").Select "mobile"
+wait(2)
+Browser("Zomato").Page("Zomato").WebEdit("type here...").Set "700000000000000"
+wait(2)
+Browser("Zomato").Page("Zomato").WebElement("+91chevron-downPlease").Click
+wait(2)
+Browser("Zomato").Page("Zomato").WebElement("Please enter your phone").GetROProperty("text")
+acuall10=DataTable.Value("Expected_Value","Test Data")
+If Instr(res10,acuall10)=0 Then
+Reporter.ReportEvent micPass,"test20" , "Pass"
+Else
+Reporter.ReportEvent micFail,"test20" , "Fail"
+End if	
+If Instr(res10,acuall10)=0 Then
+test20= "Pass"
+Else
+test20= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+'Check CheckPoint("Bikanervala | Order Online from Bikanervala in Connaught Place")
+'Check CheckPoint("Inspiration for your first order")
+'Check CheckPoint("Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends_2")
+'Check CheckPoint("Top brands for you")
+'Check CheckPoint("Nightlife Restaurants in Delhi, India, India")
+'Check CheckPoint("Haldiram's, Delhi, India, India")
+'Check CheckPoint("Haldiram's, Delhi, India, India")
+'Check CheckPoint("KFC, North Delhi")
+'Check CheckPoint("Om Sweets & Snacks Menu")
+'Check CheckPoint("Please enter your email id")	
+'Check CheckPoint("Please enter your phone number")	

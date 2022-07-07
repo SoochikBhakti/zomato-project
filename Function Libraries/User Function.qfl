@@ -1,0 +1,255 @@
+﻿Function TopR()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(5)
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(BikaLink).Click
+wait(5)
+resstring1 = Browser(browserObject).Page(Bikapage).GetROProperty("text")
+wait(2)
+searchString1=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString1,searchString1)>=0 Then
+Reporter.ReportEvent micPass,"TOP-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"TOP-Restaurant" , "Fail"
+End if
+If Instr(resString1,searchString1)>=0 Then
+TopR= "Pass"
+Else
+TopR= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function TopRB()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(5)
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(BiryLink).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(DelLink).Click
+wait(2)
+resString2=Browser(browserObject).Page(pageObject).WebElement(Inspi).GetROProperty("text")
+searchString2=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString2,searchString2)>=0 Then
+Reporter.ReportEvent micPass,"Biry-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"Biry-Restaurant" , "Fail"
+End if
+If Instr(resString2,searchString2)>=0 Then
+TopRB= "Pass"
+Else
+TopRB= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function BTW()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(2)
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(2)
+Browser(browserObject).Page(pageObject).Link(BTWLink).Click
+wait(2)
+Browser(browserObject).Page(pageObject).Link(BTW1Link).Click
+wait(2)
+Browser(browserObject).Page(pageObject).WebTabStrip(BTWwebS).Select "Dining Out"
+wait(2)
+resString3=Browser(browserObject).Page(pageObject).WebElement(BTWwebSS).GetROProperty("text")
+searchString3=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString3,searchString3)>=0 Then
+Reporter.ReportEvent micPass,"BTW-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"BTW-Restaurant" , "Fail"
+End if
+If Instr(resString3,searchString3)>=0 Then
+BTW= "Pass"
+Else
+BTW= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function BUGking()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(BkLink).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(NCRLink).Click
+wait(5)
+resString4=Browser(browserObject).Page(pageObject).WebElement(BKweb).GetROProperty("text")
+searchString4=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString4,searchString4)>=0 Then
+Reporter.ReportEvent micPass,"Bk-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"Bk-Restaurant" , "Fail"
+End if
+If Instr(resString4,searchString4)>=0 Then
+BUGking= "Pass"
+Else
+BUGking= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function DOMI()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(10)
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(5)
+Browser(browserObject).Page(pageObject).Link(DomiLink).Click
+wait(3)
+Browser(browserObject).Page(pageObject).WebElement(Rating).Click
+wait(3)
+Browser(browserObject).Page(pageObject).WebElement(RatingNum).Click
+wait(3)
+Browser(browserObject).Page(pageObject).WebButton(Applybtu).Click
+wait(2)
+resstring5 = Browser(browserObject).Page(pageObject).GetROProperty("text")
+searchString5=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString5,searchString5)>=0 Then
+Reporter.ReportEvent micPass,"DOMI-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"DOMI-Restaurant" , "Fail"
+End if
+If Instr(resString5,searchString5)>=0 Then
+DOMI= "Pass"
+Else
+DOMI= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function HaldiRam()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+Browser(browserObject).Page(pageObject).Link(HalLink).Click
+Browser(browserObject).Page(pageObject).WebElement(FinDin).Click
+resstring6 = Browser(browserObject).Page(pageObject).GetROProperty("text")
+searchString6=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString6,searchString6)>=0 Then
+Reporter.ReportEvent micPass,"HaldiRam-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"HaldiRam-Restaurant" , "Fail"
+End if
+Browser(browserObject).Page(pageObject).WebButton(Backbtu).Highlight
+If Instr(resString6,searchString6)>=0 Then
+HaldiRam= "Pass"
+Else
+HaldiRam= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function KFC()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+Browser(browserObject).Page(pageObject).Link(KFCLink).Click
+Browser(browserObject).Page(pageObject).Image(KFCcard).Click
+Browser(browserObject).Page(pageObject).WebElement(share).Click
+resString7= Browser(browserObject).Page(pageObject).GetROProperty("text")
+searchString7=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString7,searchString7)>=0 Then
+Reporter.ReportEvent micPass,"KFC-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"KFC-Restaurant" , "Fail"
+End if
+If Instr(resString7,searchString7)>=0 Then
+KFC= "Pass"
+Else
+KFC= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function OM()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+wait(10)
+Browser(browserObject).Page(pageObject).WebButton(TopBtn).Click
+wait(3)
+Browser(browserObject).Page(pageObject).Link(OMLink).Click
+wait(3)
+Browser(browserObject).Page(pageObject).Image(RestcardOM).Click
+wait(3)
+Browser(browserObject).Page(pageObject).Link(OMSLink).Click
+wait(3)
+resString8 = Browser(browserObject).Page(pageObject).GetROProperty("text")
+searchString8=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString8,searchString8)=0 Then
+Reporter.ReportEvent micPass,"OM-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"OM-Restaurant" , "Fail"
+End if
+If Instr(resString8,searchString8)>=0 Then
+OM= "Pass"
+Else
+OM= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+Function ApplinkEmail()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+Browser(browserObject).Page(pageObject).WebEdit(webeditL).Set "bhaktisoochik"
+Browser(browserObject).Page(pageObject).WebElement(EnterVal).Click
+resString9 = Browser(browserObject).Page(pageObject).WebElement(PlsEnter).GetROProperty("text")
+acual9=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString9,acual9)=0 Then
+Reporter.ReportEvent micPass,"APP-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"APP-Restaurant" , "Fail"
+End if
+If Instr(resString9,acual9)=0 Then
+ApplinkEmail= "Pass"
+Else
+ApplinkEmail= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function 
+
+
+Function APPLinkCont()
+SystemUtil.Run"Chrome.exe"
+Browser(browserObject).Navigate"https://www.zomato.com/"
+Browser(browserObject).Page(pageObject).WebElement(RadioL).Click
+Browser(browserObject).Page(pageObject).WebEdit(TypeH).Set "75263542665555555555"
+Browser(browserObject).Page(pageObject).WebElement(Entermnp).Click
+resString10 = Browser(browserObject).Page(pageObject).WebElement(Plsent).GetROProperty("text")
+acual10=DataTable.Value("Expected_Value","Test Data")
+If Instr(resString10,acual10)=0 Then
+Reporter.ReportEvent micPass,"APPC-Restaurant " , "Pass"
+Else
+Reporter.ReportEvent micFail,"APPC-Restaurant" , "Fail"
+End if	
+If Instr(resString10,acual10)=0 Then
+APPLinkCont= "Pass"
+Else
+APPLinkCont= "Fail"
+End if
+Systemutil.CloseProcessByName"chrome.exe"
+End Function
+
+
+'Check CheckPoint("Bikanervala | Order Online from Bikanervala in Delhi NCR")
+'Check CheckPoint("Inspiration for your first order")
+'Check CheckPoint("Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends_2")
+'Check CheckPoint("Top brands for you")
+'Check CheckPoint("Dominos Outlets: Check Dominos locations online in Delhi NCR")
+'Check CheckPoint("Haldiram's Outlets: Check Haldiram's locations online in Delhi NCR")
+'Check CheckPoint("KFC, Paharganj, New Delhi")
+'Check CheckPoint("Om Sweets & Snacks Menu, Menu for Om Sweets & Snacks, Jail Road, New Delhi")
+'Check CheckPoint("Please enter your email id")
+'Check CheckPoint("Please enter your phone number")
+
+
